@@ -1,0 +1,46 @@
+hydra:
+  job_logging:
+    root:
+      handlers: [file, console]  # logging to file only.
+  run:
+    dir: logs/${model_name}
+
+
+# model name
+# model_name: MCL_alpha${alpha}_beta${beta}_t${temperature}_rr${repel_ratio}
+model_name: MCL
+
+# Basic setting
+dataset: cifar10
+backbone: resnet34 # resnet18 or resnet34, resnet50, 
+epochs: 400
+
+# MCL hyper-parameter
+CCM : True 
+SPA : True
+SPA_weight : 1
+alpha: 0.05 
+beta: 2
+temperature: 0.2
+log_interval: 50
+
+# SEI Evaluation
+evaluate : True
+load_epoch : 400
+SEI_way : 8     # SEI = 1,4,8 (1 for vanilla evaluation)
+SEI_method : wa # mean, min, wa
+SEI_shuffle : True
+
+
+# Contrastive learning hyper-parameter 
+projection_dim: 128 # "[...] to project the representation to a 128-dimensional latent space"
+batch_size: 1024
+distortion: 0.5
+
+# Fixed value
+optimizer: 'sgd' # or LARS (experimental)
+momentum: 0.9
+weight_decay: 1.0e-6 
+workers: 15
+seed: 42 
+data_dir: data
