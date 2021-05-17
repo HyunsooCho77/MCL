@@ -1,5 +1,5 @@
 # MCL on (CIFAR-10, CIFAR-100) 
-Code for MCL.
+Official code for MCL. ([Masked Contrastive Learning for Anomaly Detection]() IJCAI-2021)
 This code includes SEI eval on CIFAR-100. (AUROC around 94.)
 
 
@@ -31,17 +31,15 @@ Use the following prefix to train MCL with single GPU :
 All the hyperparameters are available in ``mcl_config.yml``, 
 which could be overrided from the command line.
 
-## Evaluate pre-trained model.
+## Evaluate trained model.
 
-Download MCL pre-trained model.
+Download MCL [trained model](https://www.dropbox.com/s/hwag0bp6e6cbmab/epoch_800.pt?dl=0).
 
-https://www.dropbox.com/s/hwag0bp6e6cbmab/epoch_800.pt?dl=0
-
-place pretrained model (``epoch_800.pt``) in  following directory
+place trained model (``epoch_800.pt``) in  following directory.
 
 ``./logs/model_name(default : MCL)/ckpt/epoch_800.pt``
 
-to evaluate pretrained model, set evaluate flag to True and load_epoch to 800 in ``mcl_config.yml``.
+To evaluate pretrained model, set evaluate flag to True and load_epoch to 800 in ``mcl_config.yml``.
 
 Then run ``python mcl_main.py``.
 

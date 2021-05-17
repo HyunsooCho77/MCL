@@ -25,12 +25,11 @@ temperature: 0.2
 log_interval: 50
 
 # SEI Evaluation
-evaluate : True
+evaluate : False
 load_epoch : 800
 SEI_way : 8     # SEI = 1,4,8 (1 for vanilla evaluation)
 SEI_method : wa # mean, min, wa
 SEI_shuffle : True
-
 
 # Contrastive learning hyper-parameter 
 projection_dim: 128 # "[...] to project the representation to a 128-dimensional latent space"
