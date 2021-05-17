@@ -31,9 +31,9 @@ Use the following prefix to train MCL with single GPU :
 All the hyperparameters are available in ``mcl_config.yml``, 
 which could be overrided from the command line.
 
-## Pretrained model.
+## Evaluate pre-trained model.
 
-MCL pretrained model.
+Download MCL pre-trained model.
 
 https://www.dropbox.com/s/hwag0bp6e6cbmab/epoch_800.pt?dl=0
 
@@ -41,7 +41,7 @@ place pretrained model (``epoch_800.pt``) in  following directory
 
 ``./logs/model_name(default : MCL)/ckpt/epoch_800.pt``
 
-to run pretrained model, set resume flage to True and load_epoch to 800 in ``mcl_config.yml``.
+to evaluate pretrained model, set evaluate flag to True and load_epoch to 800 in ``mcl_config.yml``.
 
 Then run ``python mcl_main.py``.
 

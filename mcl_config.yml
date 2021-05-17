@@ -26,7 +26,7 @@ log_interval: 50
 
 # SEI Evaluation
 evaluate : True
-load_epoch : 400
+load_epoch : 800
 SEI_way : 8     # SEI = 1,4,8 (1 for vanilla evaluation)
 SEI_method : wa # mean, min, wa
 SEI_shuffle : True
