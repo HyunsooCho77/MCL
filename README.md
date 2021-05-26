@@ -1,5 +1,5 @@
 # MCL on (CIFAR-10, CIFAR-100) 
-Official code for MCL. ([Masked Contrastive Learning for Anomaly Detection]() IJCAI-2021)
+Official code for MCL. ([Masked Contrastive Learning for Anomaly Detection](https://arxiv.org/abs/2105.08793) IJCAI-2021)
 This code includes SEI eval on CIFAR-100. (AUROC around 94.)
 Some codes are from [SimCLR-CIFAR10](https://github.com/wangxin0716/SimCLR-CIFAR10).
 
